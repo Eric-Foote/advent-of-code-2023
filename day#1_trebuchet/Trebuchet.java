@@ -23,10 +23,21 @@
  * Code prompt comes from https://adventofcode.com/2023/day/1
  */
 
+import java.io.File;
+import java.util.Scanner;
 
 public class Trebuchet
 {
 	public static void main (String[] args){
-		System.out.println("Testing the java compiler and basic formating");
+		try{
+			File file = new File("Testing.txt");
+			Scanner scan = new Scanner(file);
+			while(scan.hasNextLine()){
+				System.out.println(scan.nextLine());
+			}
+			} catch (Exception e){
+			System.out.println("ERROR");
+			e.printStackTrace();
+			}
 	}
 }
