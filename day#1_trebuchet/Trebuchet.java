@@ -57,7 +57,7 @@ public class Trebuchet
 		int right = 0;
 		int value = 0;
 		try{ // This block of code inputs the file but makes sure first that the file exists
-			File file = new File("Testing2.txt");
+			File file = new File("input.txt");
 			Scanner scan = new Scanner(file);
 			while(scan.hasNextLine()){
 				input.add(scan.nextLine());
@@ -69,9 +69,16 @@ public class Trebuchet
 			}
 		for(int i = 0; i < input.size(); i++){
 			String current = input.get(i);
-			/*
-			 * Lines 75 to 83 can be removed in order to get the correct solution for part 1
-			 */
+			System.out.println(current);
+			current = current.replaceAll("sevenineight", "798");
+			current = current.replaceAll("twoneight", "218");
+			current = current.replaceAll("oneight", "18");
+			current = current.replaceAll("twone", "21");
+			current = current.replaceAll("threeight", "38");
+			current = current.replaceAll("fiveight", "58");
+			current = current.replaceAll("sevenine", "79");
+			current = current.replaceAll("nineight", "98");
+			current = current.replaceAll("eightwo", "82");
 			current = current.replaceAll("one", "1");
 			current = current.replaceAll("two", "2");
 			current = current.replaceAll("three", "3");
@@ -81,6 +88,7 @@ public class Trebuchet
 			current = current.replaceAll("seven", "7");
 			current = current.replaceAll("eight", "8");
 			current = current.replaceAll("nine", "9");
+			System.out.println(current);
 			char[] currentArray = current.toCharArray(); // Takes each line of input and breaks it into an array of the individual characters
 			for(int j = 0; j < currentArray.length; j++)
 			{ // Iterate over each individual character
