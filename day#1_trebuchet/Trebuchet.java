@@ -69,6 +69,9 @@ public class Trebuchet
 			}
 		for(int i = 0; i < input.size(); i++){
 			String current = input.get(i);
+			/*
+			 * Lines 75 to 83 can be removed in order to get the correct solution for part 1
+			 */
 			current = current.replaceAll("one", "1");
 			current = current.replaceAll("two", "2");
 			current = current.replaceAll("three", "3");
