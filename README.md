@@ -2,7 +2,7 @@
 
 1. Trebuchet
     - Part #1: Solution Complete and Correct
-    - Part #2: Solution Incomplete
+    - Part #2: Solution Incorrect, possible idea for solution implemented in source code Trebuchet.java but incorrect for handling cases where ending of one number is beginning of another i.e. twone will just give use tw1 instead of 21
 2.
 3.
 4.
