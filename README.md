@@ -2,7 +2,7 @@
 
 1. Trebuchet
     - Part #1: Solution Complete and Correct
-    - Part #2: Solution Incorrect, possible idea for solution implemented in source code Trebuchet.java but incorrect for handling cases where ending of one number is beginning of another i.e. twone will just give use tw1 instead of 21
+    - Part #2: Solution Complete and Correct, however, its a brute force solution that checks every line of input for not only the spelling of the numbers but the edge cases were the spelling of one number starts the spelling of another, i.e. SEVENINEIGHT giving us the number 798
 2.
 3.
 4.
