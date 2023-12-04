@@ -56,7 +56,7 @@ public class Trebuchet
 		int right = 0;
 		int value = 0;
 		try{ // This block of code inputs the file but makes sure first that the file exists
-			File file = new File("input.txt");
+			File file = new File("Testing2.txt");
 			Scanner scan = new Scanner(file);
 			while(scan.hasNextLine()){
 				input.add(scan.nextLine());
@@ -68,6 +68,9 @@ public class Trebuchet
 		for(int i = 0; i < input.size(); i++){
 			String current = input.get(i);
 			System.out.println(current);
+			/*
+			 * RIGHT HERE IS WHERE PART 2's WORK IS GOING TO HAVE TO BE DONE
+			 */
 			char[] currentArray = current.toCharArray(); // Takes each line of input and breaks it into an array of the individual characters
 			for(int j = 0; j < currentArray.length; j++)
 			{ // Iterate over each individual character
