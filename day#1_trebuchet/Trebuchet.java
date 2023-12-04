@@ -45,6 +45,8 @@
 import java.util.ArrayList;
 import java.io.File;
 import java.util.Scanner;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
 
 public class Trebuchet
 {
@@ -61,16 +63,23 @@ public class Trebuchet
 			while(scan.hasNextLine()){
 				input.add(scan.nextLine());
 			}
+			scan.close();
 			} catch (Exception e){
 			System.out.println("ERROR");
 			e.printStackTrace();
 			}
 		for(int i = 0; i < input.size(); i++){
 			String current = input.get(i);
+			current = current.replaceAll("one", "1");
+			current = current.replaceAll("two", "2");
+			current = current.replaceAll("three", "3");
+			current = current.replaceAll("four", "4");
+			current = current.replaceAll("five", "5");
+			current = current.replaceAll("six", "6");
+			current = current.replaceAll("seven", "7");
+			current = current.replaceAll("eight", "8");
+			current = current.replaceAll("nine", "9");
 			System.out.println(current);
-			/*
-			 * RIGHT HERE IS WHERE PART 2's WORK IS GOING TO HAVE TO BE DONE
-			 */
 			char[] currentArray = current.toCharArray(); // Takes each line of input and breaks it into an array of the individual characters
 			for(int j = 0; j < currentArray.length; j++)
 			{ // Iterate over each individual character
