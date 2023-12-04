@@ -45,8 +45,7 @@
 import java.util.ArrayList;
 import java.io.File;
 import java.util.Scanner;
-//import java.util.regex.Matcher;
-//import java.util.regex.Pattern;
+
 
 public class Trebuchet
 {
@@ -79,7 +78,6 @@ public class Trebuchet
 			current = current.replaceAll("seven", "7");
 			current = current.replaceAll("eight", "8");
 			current = current.replaceAll("nine", "9");
-			System.out.println(current);
 			char[] currentArray = current.toCharArray(); // Takes each line of input and breaks it into an array of the individual characters
 			for(int j = 0; j < currentArray.length; j++)
 			{ // Iterate over each individual character
@@ -93,7 +91,8 @@ public class Trebuchet
 			}
 			if (right == 0) // This case is to make sure that if one character exists on the line
 				right = left;
-			intermediateStep = "" + left + right; // This is needed in order to glue the integers together
+			System.out.println(left + "" + right);
+			intermediateStep = left + "" + right; // This is needed in order to glue the integers together
 			value = Integer.parseInt(intermediateStep);
 			sum += value;
 			left = 0; // Resets the value for the next iteration of the loop
