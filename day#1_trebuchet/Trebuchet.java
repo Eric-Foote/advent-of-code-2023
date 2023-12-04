@@ -23,21 +23,26 @@
  * Code prompt comes from https://adventofcode.com/2023/day/1
  */
 
+import java.util.ArrayList;
 import java.io.File;
 import java.util.Scanner;
 
 public class Trebuchet
 {
 	public static void main (String[] args){
+		ArrayList <String> input = new ArrayList <String>();
 		try{
 			File file = new File("Testing.txt");
 			Scanner scan = new Scanner(file);
 			while(scan.hasNextLine()){
-				System.out.println(scan.nextLine());
+				input.add(scan.nextLine());
 			}
 			} catch (Exception e){
 			System.out.println("ERROR");
 			e.printStackTrace();
 			}
+		for (int i = 0; i < input.size(); i++) {
+			System.out.println(input.get(i));
+		}
 	}
 }
