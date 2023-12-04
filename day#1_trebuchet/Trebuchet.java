@@ -31,8 +31,13 @@ public class Trebuchet
 {
 	public static void main (String[] args){
 		ArrayList <String> input = new ArrayList <String>();
-		try{
-			File file = new File("Testing.txt");
+		String intermediateStep;
+		int sum = 0;
+		int left = 0;
+		int right = 0;
+		int value = 0;
+		try{ // This block of code inputs the file but makes sure first that the file exists
+			File file = new File("input.txt");
 			Scanner scan = new Scanner(file);
 			while(scan.hasNextLine()){
 				input.add(scan.nextLine());
@@ -41,8 +46,28 @@ public class Trebuchet
 			System.out.println("ERROR");
 			e.printStackTrace();
 			}
-		for (int i = 0; i < input.size(); i++) {
-			System.out.println(input.get(i));
-		}
+		for(int i = 0; i < input.size(); i++){
+			String current = input.get(i);
+			System.out.println(current);
+			char[] currentArray = current.toCharArray(); // Takes each line of input and breaks it into an array of the individual characters
+			for(int j = 0; j < currentArray.length; j++)
+			{ // Iterate over each individual character
+				if(Character.isDigit(currentArray[j]))
+						{	if(left == 0) 
+								left = Character.getNumericValue(currentArray[j]); // Extracts the numeric value of the character
+							else
+								right = Character.getNumericValue(currentArray[j]);
+						}
+
+			}
+			if (right == 0) // This case is to make sure that if one character exists on the line
+				right = left;
+			intermediateStep = "" + left + right; // This is needed in order to glue the integers together
+			value = Integer.parseInt(intermediateStep);
+			sum += value;
+			left = 0; // Resets the value for the next iteration of the loop
+			right = 0;			
+		}	
+	System.out.println("The sum is " + sum);
 	}
 }
