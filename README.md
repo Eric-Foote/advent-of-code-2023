@@ -1,7 +1,7 @@
 # Advent of Code 2023
 
 1. Trebuchet
-    - Part #1: Solution Incomplete
+    - Part #1: Solution Complete and Correct
     - Part #2: Solution Incomplete
 2.
 3.
