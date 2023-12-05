@@ -42,7 +42,10 @@ import java.util.Scanner;
  
     public static void main(String[] args) {
         ArrayList <String> input = new ArrayList<String>();
-
+        int max_Red = 12; // Hardcoding the max number of red
+        int max_Green = 13; // Hardcoding the max number of green
+        int max_Blue = 14; // Hardcoding the max number of blue
+        int idSum = 0;
         try {
             File file = new File("Testing.txt");
             Scanner scan = new Scanner(file);
@@ -51,11 +54,12 @@ import java.util.Scanner;
             }
             scan.close();
         } catch (Exception e) {
-         System.out.println("Error");
-         e.printStackTrace();
+            System.out.println("Error");
+            e.printStackTrace();
         }
         for (int i = 0; i < input.size(); i++) {
-         System.out.println(input.get(i));
+            System.out.println(input.get(i));
         }
+        
     }
- }
+}
