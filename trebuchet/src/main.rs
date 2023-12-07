@@ -23,14 +23,12 @@ fn main() {
         for c in &chars {
             if c.is_numeric() {
                 left = *c;
-                //println!("{left}");
                 break;
             }
         }
         for c in chars.iter().rev(){
             if c.is_numeric() {
                 right = *c;
-                //println!("{right}");
                 break;
             }
 
